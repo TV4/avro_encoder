@@ -7,7 +7,7 @@ defmodule Avroex.AvroEncoding do
   def get_data_template(id) do
     [
       {"vimond_user_id", "#{vimond_id(id)}"},
-      {"email", :null},
+      {"email", "test-#{id}@example.test"},
       {"contact_id", 123_456_789},
       {"csn", "123456789"},
       {"customer_id", "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa"},
@@ -18,9 +18,9 @@ defmodule Avroex.AvroEncoding do
       {"sales_item_name", "C More TV4"},
       {"product_type", "SUBSCRIPTION"},
       {"product_price", 139.0},
-      {"subcontract_status", "CUSTOMER_CANCELLED"},
+      {"subcontract_status", "ACTIVE"},
       {"start_date", 1_558_051_200_000_000},
-      {"end_date", 1_568_678_400_000_000},
+      {"end_date", :null},
       {"earliest_end_date", 1_558_051_200_000_000},
       {"init_charge", 0.0},
       {"init_price", 139.0},
@@ -42,7 +42,7 @@ defmodule Avroex.AvroEncoding do
       {"source_code", :null},
       {"promotion_code", :null},
       {"refer_a_friend_code", :null},
-      {"cancel_scheduled_date", 1_566_172_800_000_000},
+      {"cancel_scheduled_date", :null},
       {"product_category", "Subscription"},
       {"product_country", "Sweden"},
       {"product_group", "C+More+TV4"}
@@ -52,7 +52,7 @@ defmodule Avroex.AvroEncoding do
   def get_data_template(file_id, entry_id) when is_integer(file_id) and is_integer(entry_id) do
     [
       {"vimond_user_id", "#{vimond_id_extra(file_id, entry_id)}"},
-      {"email", :null},
+      {"email", "test-#{file_id}-#{entry_id}@example.test"},
       {"contact_id", 123_456_789},
       {"csn", "123456789"},
       {"customer_id", "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa"},
@@ -63,9 +63,9 @@ defmodule Avroex.AvroEncoding do
       {"sales_item_name", "C More TV4"},
       {"product_type", "SUBSCRIPTION"},
       {"product_price", 139.0},
-      {"subcontract_status", "CUSTOMER_CANCELLED"},
+      {"subcontract_status", "ACTIVE"},
       {"start_date", 1_558_051_200_000_000},
-      {"end_date", 1_568_678_400_000_000},
+      {"end_date", :null},
       {"earliest_end_date", 1_558_051_200_000_000},
       {"init_charge", 0.0},
       {"init_price", 139.0},
@@ -87,7 +87,7 @@ defmodule Avroex.AvroEncoding do
       {"source_code", :null},
       {"promotion_code", :null},
       {"refer_a_friend_code", :null},
-      {"cancel_scheduled_date", 1_566_172_800_000_000},
+      {"cancel_scheduled_date", :null},
       {"product_category", "Subscription"},
       {"product_country", "Sweden"},
       {"product_group", "C+More+TV4"}
@@ -97,7 +97,7 @@ defmodule Avroex.AvroEncoding do
   def get_data_template(id, code) do
     [
       {"vimond_user_id", "#{vimond_id(id)}"},
-      {"email", :null},
+      {"email", "test-#{id}@example.test"},
       {"contact_id", 123_456_789},
       {"csn", "123456789"},
       {"customer_id", "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa"},
@@ -108,9 +108,9 @@ defmodule Avroex.AvroEncoding do
       {"sales_item_name", "C More TV4"},
       {"product_type", "SUBSCRIPTION"},
       {"product_price", 139.0},
-      {"subcontract_status", "CUSTOMER_CANCELLED"},
+      {"subcontract_status", "ACTIVE"},
       {"start_date", 1_558_051_200_000_000},
-      {"end_date", 1_568_678_400_000_000},
+      {"end_date", :null},
       {"earliest_end_date", 1_558_051_200_000_000},
       {"init_charge", 0.0},
       {"init_price", 139.0},
@@ -132,7 +132,7 @@ defmodule Avroex.AvroEncoding do
       {"source_code", :null},
       {"promotion_code", :null},
       {"refer_a_friend_code", :null},
-      {"cancel_scheduled_date", 1_566_172_800_000_000},
+      {"cancel_scheduled_date", :null},
       {"product_category", "Subscription"},
       {"product_country", "Sweden"},
       {"product_group", "C+More+TV4"}
