@@ -1,4 +1,4 @@
-defmodule Avroex.AvroEncoding do
+defmodule Avroex.OrderEncoding do
   @spec get_data_template(any) :: [
           {<<_::24, _::_*8>>, :null | true | <<_::24, _::_*8>> | number},
           ...
